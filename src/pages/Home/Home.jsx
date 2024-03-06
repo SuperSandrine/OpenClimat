@@ -6,9 +6,9 @@ import EcosystemeSection from './EcosystemeSection/EcosystemeSection';
 const Home = () => {
   return (
     <RootLayout>
-      <div class="flex justify-evenly bg-gradient-to-b from-bg-dark-blue via-bg-middle-blue to-bg-light-pink h-screen pt-[15.9375rem]">
-        <h2 class="text-5xl text-white w-[23.4375rem]">Rejoignez la plateforme ouverte de l’action climatique</h2>
-        <img src={imageSVG} class=" w-[32.94rem] object-top object-contain" />
+      <div className="flex justify-evenly bg-gradient-to-b from-bg-dark-blue via-bg-middle-blue to-bg-light-pink h-screen pt-[15.9375rem]">
+        <h2 className="text-5xl text-white w-[23.4375rem]">Rejoignez la plateforme ouverte de l’action climatique</h2>
+        <img src={imageSVG} className=" w-[32.94rem] object-top object-contain" />
       </div>
       <EcosystemeSection/>
     </RootLayout>
