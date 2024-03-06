@@ -6,12 +6,10 @@ export function App() {
   //const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/*" element={<Error />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/*" element={<Error />} />
+    </Routes>
   );
 }
 
