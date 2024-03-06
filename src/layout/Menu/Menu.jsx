@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import logoSVG from '../../assets/LOGO OC (1).svg';
 import flagFR from '../../assets/DRAPEAU FR.svg'
 import { Link } from 'react-router-dom';
@@ -7,11 +8,36 @@ import DropDown from '../../components/Dropdown/DropDown';
 
 /*
 todo : - dropdown
-todo : - change background according lightness of background bellow (filter)
 */
 
 const Menu = () => {
-  return <div className="flex fixed top-0 w-[calc(100vw-4rem)] xl:w-[1280px-4rem]  backdrop-filter backdrop-blur-lg py-[2rem] mx-[2rem] justify-between text-white text-[15px] border-b border-white/40 z-40 ">
+  const handleScroll = () => {
+    const sectionEcosysteme = document.getElementById("sectionEcosysteme");
+    const menu = document.getElementById("menu");
+
+    if (sectionEcosysteme && menu) {
+      const rect = sectionEcosysteme.getBoundingClientRect();
+      const isVisible = rect.top <= 250 
+
+      if (isVisible) {
+        menu.style.backgroundColor = '#031356';
+      } else if (!isVisible){
+        menu.style.backgroundColor = 'transparent'
+
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+  return <div className=" fixed top-0 w-full xl:w-full backdrop-filter backdrop-blur-md px-[2rem] text-white text-[15px] z-40 transition-all ease-in-out duration-[1s]" id="menu">
+    <div className='flex justify-between w-[calc(100vw-4rem)] xl:w-[1280px-4rem] py-[2rem]  border-b border-white/40'>
 
     <div className="flex items-center">
       <h1 aria-label='OpenClimat'><img src={logoSVG} className="pr-[2.125rem]" alt='logo OpenClimat'/> </h1>
@@ -24,6 +50,7 @@ const Menu = () => {
       <LinkMenu>Contact</LinkMenu>
       <LinkMenu>Connexion</LinkMenu>
       <Link to="/" className="pl-[2.5rem]" ><img src={flagFR} /> </Link>
+    </div>
     </div>
   </div>;
 };

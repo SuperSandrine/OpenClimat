@@ -6,6 +6,7 @@ import HeaderSection from './HeaderSection/HeaderSection';
 /*
 todo: DRY
 todo: aria
+todo: responsive
 */
 
 const Home = () => {
