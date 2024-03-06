@@ -6,6 +6,10 @@
   body {
     font-family: "MoskauGrotesk", sans-serif;
   }
+  #root{
+    max-width: 1280px;
+    margin:auto;
+  }
 }
 
 @layer components{
@@ -16,10 +20,6 @@
     @apply relative px-[2.125rem] cursor-pointer  
   }
   .menu-hover{
-    @apply hidden border-b border-white top-[calc(2rem+26px)]  left-[2.125rem] w-[calc(100%-4.25rem)] z-40 
+    @apply absolute border-b border-white top-[calc(2rem+26px)]  left-[2.125rem] w-[calc(100%-4.25rem)] z-40 transition-all scale-0 duration-300 origin-left
   }
-  /* .menu-hover{
-    @apply absolute border-b border-white top-[calc(2rem+26px)]  left-[2.125rem] w-[calc(100%-4.25rem)]
-  } */
-
 }

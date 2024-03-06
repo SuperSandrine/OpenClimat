@@ -10,7 +10,17 @@ export default {
       'dark-blue': '#031356',
       'red': 'red',
     },
-    extend: {},
+    extend: {
+      keyframes:{
+        glissade:{
+          '0%':{transform: 'translateY(0px)', opacity:1 },
+          '100%':{transform: 'translateY(-50vh)',opacity:0}
+        }
+      },
+      animation:{
+        glissade: 'glissade 2s ease-in-out 1s 1'
+      }
+    },
   },
   plugins: [],
 };
