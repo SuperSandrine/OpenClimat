@@ -7,7 +7,7 @@ import LinkMenu from '../../components/LinkMenu/LinkMenu';
 import DropDown from '../../components/Dropdown/DropDown';
 
 /*
-todo : - dropdown
+todo : dropdown : transistion ul shown/hidden
 todo : élargir la height des boutons
 */
 

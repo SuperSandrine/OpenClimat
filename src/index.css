@@ -12,9 +12,7 @@
 }
 
 @layer components{
-  .dropdown-button {
-    @apply flex gap-2 relative items-center hover:bg-red hover:border-b hover:border-white
-  }
+
   .menu-link{
     @apply relative px-[2.125rem]  
   }
