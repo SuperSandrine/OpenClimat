@@ -8,13 +8,13 @@ import DropDown from '../../components/Dropdown/DropDown';
 
 /*
 todo : dropdown : transistion ul shown/hidden
-todo : élargir la height des boutons
+todo : dropdown : fond conditionnel
+done : élargir la height des boutons
 */
 
 const Menu = () => {
   const JoinOptions=['Je suis une entreprise','Je suis un média','Je suis une ONG']
   const RessourcesOptions=['Base de données','Simulateur SBTi','Méthodologie','Application Nota Climat']
-
 
 
   const handleScroll = () => {
@@ -42,17 +42,19 @@ const Menu = () => {
   }, []);
 
 
-  return <div className=" fixed top-0 mx-auto container  backdrop-blur-md px-[2rem] text-white text-[15px] z-40 transition-all ease-in-out duration-[1s]" id="menu">
-    <div className='flex justify-between 
-      py-[2rem]  border-b border-white/40 container-xl'>
+  return (
+  <div className=" fixed top-0 mx-auto container  backdrop-blur-md px-[2rem] text-white text-[15px] z-40 transition-all ease-in-out duration-[1s] " id="menu">
+    <div className='flex justify-between border-b border-white/40 container-xl'>
 
 {/* <div className='flex justify-between w-[calc(100vw-4rem)] 
     xl:w-[1280px-4rem] 2xl:xl:w-[1280px-4rem] py-[2rem]  border-b border-white/40'> */}
 
     <div className="flex items-center">
-      <h1 aria-label='OpenClimat'><img src={logoSVG} className="pr-[2.125rem]" alt='logo OpenClimat'/> </h1>
+      <h1 aria-label='OpenClimat'>
+        <img src={logoSVG} className="pr-[2.125rem]" alt='logo OpenClimat'/>
+      </h1>
       <DropDown buttonName="Rejoindre l'écosystème" elements={JoinOptions}></DropDown>
-      <LinkMenu>Media</LinkMenu>
+      <LinkMenu >Media</LinkMenu>
       <DropDown buttonName="Ressources" elements={RessourcesOptions}></DropDown>
     </div>
     
@@ -62,7 +64,8 @@ const Menu = () => {
       <Link to="/" className="pl-[2.5rem]" ><img src={flagFR} /> </Link>
     </div>
     </div>
-  </div>;
+  </div>
+  )
 };
 
 export default Menu;

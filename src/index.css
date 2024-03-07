@@ -14,9 +14,11 @@
 @layer components{
 
   .menu-link{
-    @apply relative px-[2.125rem]  
+    @apply relative px-[2.125rem] py-[2rem]
   }
   .menu-hover{
-    @apply absolute border-b border-white top-[calc(2rem+26px)] w-[calc(100%-4.25rem)] z-40 transition-all scale-0 duration-300 origin-left
+    @apply absolute border-b border-white 
+    bottom-[-0.5px]
+    w-[calc(100%-4.25rem)] z-40 transition-all scale-0 duration-300 origin-left
   }
 }
