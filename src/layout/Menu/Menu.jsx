@@ -36,14 +36,18 @@ const Menu = () => {
   }, []);
 
 
-  return <div className=" fixed top-0 w-full xl:w-full backdrop-filter backdrop-blur-md px-[2rem] text-white text-[15px] z-40 transition-all ease-in-out duration-[1s]" id="menu">
-    <div className='flex justify-between w-[calc(100vw-4rem)] xl:w-[1280px-4rem] py-[2rem]  border-b border-white/40'>
+  return <div className=" fixed top-0 mx-auto container  backdrop-blur-md px-[2rem] text-white text-[15px] z-40 transition-all ease-in-out duration-[1s]" id="menu">
+    <div className='flex justify-between 
+      py-[2rem]  border-b border-white/40 container-xl'>
+
+{/* <div className='flex justify-between w-[calc(100vw-4rem)] 
+    xl:w-[1280px-4rem] 2xl:xl:w-[1280px-4rem] py-[2rem]  border-b border-white/40'> */}
 
     <div className="flex items-center">
       <h1 aria-label='OpenClimat'><img src={logoSVG} className="pr-[2.125rem]" alt='logo OpenClimat'/> </h1>
       <DropDown buttonName="Rejoindre l'écosystème"></DropDown>
       <LinkMenu>Media</LinkMenu>
-      <LinkMenu>Ressources</LinkMenu>
+      <DropDown buttonName="Ressources"></DropDown>
     </div>
     
     <div className="flex  items-center">
