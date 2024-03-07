@@ -8,9 +8,15 @@ import DropDown from '../../components/Dropdown/DropDown';
 
 /*
 todo : - dropdown
+todo : élargir la height des boutons
 */
 
 const Menu = () => {
+  const JoinOptions=['Je suis une entreprise','Je suis un média','Je suis une ONG']
+  const RessourcesOptions=['Base de données','Simulateur SBTi','Méthodologie','Application Nota Climat']
+
+
+
   const handleScroll = () => {
     const sectionEcosysteme = document.getElementById("sectionEcosysteme");
     const menu = document.getElementById("menu");
@@ -45,9 +51,9 @@ const Menu = () => {
 
     <div className="flex items-center">
       <h1 aria-label='OpenClimat'><img src={logoSVG} className="pr-[2.125rem]" alt='logo OpenClimat'/> </h1>
-      <DropDown buttonName="Rejoindre l'écosystème"></DropDown>
+      <DropDown buttonName="Rejoindre l'écosystème" elements={JoinOptions}></DropDown>
       <LinkMenu>Media</LinkMenu>
-      <DropDown buttonName="Ressources"></DropDown>
+      <DropDown buttonName="Ressources" elements={RessourcesOptions}></DropDown>
     </div>
     
     <div className="flex  items-center">

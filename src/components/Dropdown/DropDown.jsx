@@ -1,32 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import arrow from '../../assets/Vector.svg'
+import DropdownListEl from './DropdownListEl'
 
-
+/*
+todo : changer dynamiquement la valeur witdh minimum de li pour qu'elle corresponde à celle de son button
+todo : travailler l'animation d'apparition du block ul
+*/
 
 const DropDown = (props) => {
-  const {buttonName} =props
+  const {buttonName, elements} = props
+  console.log("elements", elements);
   return (
     <div className='dropdown relative inline-block'>
-      <div>
-        <button className='flex gap-2 relative items-center hover:bg-red hover:border-b hover:border-white group'>
-          <p>{buttonName}</p>
-          <img src={arrow} />
+      <div className="group">
+        
+        <button className=' menu-link items-center flex gap-2 '>
+            <p>{buttonName}</p>
+            <img src={arrow} />
+            <div className="menu-hover group-hover:block  group-hover:scale-100 "></div>
         </button>
-        <ul className='hidden group-hover:text-red '>
-          <li>
-            <Link to="#" className='group-hover:text-red'>A</Link>
-            <Link to="#">B</Link>
-            <Link to="#">C</Link>
-          </li>
+
+        <ul className="hidden absolute group-hover:block top-[calc(2rem+26px)] left-[2.125rem] min-w-44">
+          {elements.map((el,index)=>(<DropdownListEl key={index}>{el}</DropdownListEl>))}
         </ul>
+
       </div>
-     {/* <div className="flex relative px-[2.125rem] gap-2">
-      <p>{buttonName}</p> <img src={arrow} />
-        <div className="absolute border-b border-white top-[calc(2rem+26px)]  left-[2.125rem] w-[calc(100%-4.25rem)]" >
-        </div> 
-      </div>*/}
-      </div> 
+    </div> 
   )
 }
 
