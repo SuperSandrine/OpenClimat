@@ -9,16 +9,41 @@ todo : change width in pourcentage according screen width
 */
 
 const HeaderSection = () => {
+  const texts = document.querySelectorAll('.header-text')
+  console.log("texts", texts);
+
+  window.onscroll=()=>{
+    texts.forEach(txt=>{
+      let top = window.scrollY; 
+      let offset = txt.offsetTop-255 ;
+      let height = txt.offsetHeight; //614
+
+      console.log("offset", top, txt.offsetTop, offset);
+
+      //if (top >= offset && top < offset + height){
+
+      if (top >= offset ){
+        txt.classList.add('animate-glissade');
+      }
+      else{
+        txt.classList.remove('animate-glissade')
+      }
+    })
+  }
 
   return (
     <div className="flex justify-evenly bg-gradient-to-b from-bg-dark-blue via-bg-middle-blue to-bg-light-pink h-screen pt-[15.9375rem] ">
-        <div className="flex-col w-[23.4375rem] relative">
-        <h2 className="text-5xl text-white animate-glissade" id="introFirst">Rejoignez<br/> la plateforme ouverte<br/> de l’action climatique</h2>
-        <h2 className="text-5xl text-white opacity-0" id="introSecond">Une page pédagogique, fiable et comparable pour communiquer et progresser avec tout votre écosystème.</h2>
-        <div className="text-5xl text-white opacity-0" id="introThird">
-        <h2>N'agissez plus seul. Rejoignez le mouvement et réussissons ensemble le défi de notre siècle.</h2>
-        <button>Rejoindre le mouvement <img src={arrow}/></button>
-        </div>
+        <div className="flex-col w-[23.4375rem] relative animate-glissade">
+          <section className='header-text h-[30vh] ' id="introFirst">
+            <h2 className="text-5xl text-white animate-glissade" >Rejoignez<br/> la plateforme ouverte<br/> de l’action climatique</h2>
+          </section>
+          <section className='header-text h-[30vh] opacity-30'id="introSecond">
+            <h2 className="text-5xl text-white" >Une page pédagogique, fiable et comparable pour communiquer et progresser avec tout votre écosystème.</h2>
+          </section>
+          <section className="header-text opacity-30 text-5xl text-white h-[40vh]" id="introThird">
+            <h2>N'agissez plus seul. Rejoignez le mouvement et réussissons ensemble le défi de notre siècle.</h2>
+          <button>Rejoindre le mouvement <img src={arrow}/></button>
+          </section>
         </div>
         <img src={imageSVG} className=" w-[32.94rem] object-top object-contain" />
       </div>

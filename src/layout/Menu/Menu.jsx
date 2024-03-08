@@ -7,7 +7,7 @@ import LinkMenu from '../../components/LinkMenu/LinkMenu';
 import DropDown from '../../components/Dropdown/DropDown';
 
 /*
-todo : dropdown : transistion ul shown/hidden
+done : dropdown : transistion ul shown/hidden
 todo : dropdown : fond conditionnel
 done : élargir la height des boutons
 */
@@ -56,6 +56,14 @@ const Menu = () => {
       <DropDown buttonName="Rejoindre l'écosystème" elements={JoinOptions}></DropDown>
       <LinkMenu >Media</LinkMenu>
       <DropDown buttonName="Ressources" elements={RessourcesOptions}></DropDown>
+
+      <div className='h-16 w-16 relative group/test'>
+        <div className=' h-full w-full absolute bg-red/30 opacity-25 '></div>
+        <div className='h-full w-full scale-y-0 transform  group-hover/test:scale-y-[100%]
+        origin-top transition duration-300 bg-red '>
+        </div>
+      </div>
+
     </div>
     
     <div className="flex  items-center">

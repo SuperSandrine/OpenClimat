@@ -4,8 +4,10 @@ import DropdownListEl from './DropdownListEl'
 
 /*
 todo : changer dynamiquement la valeur witdh minimum de li pour qu'elle corresponde à celle de son button
-todo : travailler l'animation d'apparition du block ul
-todo : applique un fond conditionnel
+todo : applique un fond conditionnel à la dropdown
+todo : gérer le masque pour l'animation translate
+done : travailler l'animation d'apparition du block ul
+done : faire tourner la flèche
 */
 
 const DropDown = (props) => {
@@ -16,15 +18,22 @@ const DropDown = (props) => {
 
         <button className=' menu-link items-center flex gap-2 '>
             <p>{buttonName}</p>
-            <img src={arrow} />
-            <div className="menu-hover group-hover:block  group-hover:scale-100 "></div>
+            <img src={arrow} className='transform group-hover:-rotate-90 transition-all duration-300'/>
+            <div className="menu-hover group-hover:scale-100 "></div>
         </button>
 
-        <ul className="hidden absolute group-hover:block
-        top-[calc(4rem+22.5px)] 
-        left-[2.125rem] min-w-44 " >
+        <ul className=" absolute 
+        bottom-[100px]
+        left-[2.125rem] min-w-44 transform group-hover:translate-y-[calc(100%+100px)] transition-all duration-[1s] z-30" >
           {elements.map((el,index)=>(<DropdownListEl key={index}>{el}</DropdownListEl>))}
         </ul>
+        {/* animation avec scale-y fonctionne mais l'efeft est différent */}
+        {/* <ul className=" absolute left-[2.125rem] min-w-44 
+        scale-y-0 transform 
+        group-hover:scale-y-[100%] 
+        origin-top transition duration-700">
+          {elements.map((el,index)=>(<DropdownListEl key={index}>{el}</DropdownListEl>))}
+        </ul> */}
 
       </div>
     </div> 
