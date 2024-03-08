@@ -17,6 +17,7 @@ export default {
       'white': '#ffffff',
       'dark-blue': '#031356',
       'red': 'red',
+      'transparent': 'transparent'
     },
       container:{
         center: true,

@@ -18,7 +18,7 @@ const Menu = () => {
 
 
   const handleScroll = () => {
-    const sectionEcosysteme = document.getElementById("sectionEcosysteme");
+    const sectionEcosysteme = document.getElementById("ecosystemeSection");
     const menu = document.getElementById("menu");
 
     if (sectionEcosysteme && menu) {

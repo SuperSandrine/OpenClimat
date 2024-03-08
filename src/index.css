@@ -18,7 +18,7 @@
   }
   .menu-hover{
     @apply absolute border-b border-white 
-    bottom-[-0.5px]
+    bottom-[-1px]
     w-[calc(100%-4.25rem)] z-40 transition-all scale-0 duration-300 origin-left
   }
 }
