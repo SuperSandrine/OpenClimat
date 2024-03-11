@@ -12,7 +12,9 @@
 }
 
 @layer components{
-
+  .span-text--bold{
+    font-family: "MoskauGrotesk-Medium", sans-serif;
+  }
   .menu-link{
     @apply relative px-[2.125rem] py-[2rem]
   }

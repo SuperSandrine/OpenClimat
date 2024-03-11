@@ -1,7 +1,8 @@
 import React from 'react';
 import RootLayout from '../../layout/RootLayout';
-import EcosystemeSection from './EcosystemeSection/EcosystemeSection';
 import HeaderSection from './HeaderSection/HeaderSection';
+import CLIENTS from '../../data/clients';
+import EcosystemeSection from './EcosystemeSection/EcosytemeSection';
 
 /*
 todo: DRY
@@ -13,7 +14,7 @@ const Home = () => {
   return (
     <RootLayout>
       <HeaderSection />
-      <EcosystemeSection/>
+      <EcosystemeSection data={CLIENTS} />
     </RootLayout>
   );
 };
