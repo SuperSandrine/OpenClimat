@@ -29,10 +29,12 @@ DONE: bouton
 
 const EcosystemeSection = ({data}) => {
   const [currentKey, setCurrentKey] = useState(Object.keys(data)[0]);
-  const [currentLogo, setCurrentLogo] = useState("null")
 
-  console.log("PROPS", Object.keys(data)[0]);
-  //console.log("clients" , CLIENTS["Grande distribution"]); 
+  const [currentLogo, setCurrentLogo] = useState(data[Object.keys(data)[0]][0].logoOnline)
+
+  //console.log("PROPS", Object.keys(data)[0]);
+  console.log("clients" , data["Grande distribution"][0]);
+
   const handleButtonHover = (event) => {
     const hoveredKey = event.currentTarget.dataset.key;
     setCurrentKey(hoveredKey)
@@ -41,12 +43,19 @@ const EcosystemeSection = ({data}) => {
     //console.log("h3Content", h3Content);
     // Le reste du code...
   };
+  const handleLogoHover = (event) =>{
+    console.log("EVENT logo hover", event);
+    displayDetailsLogo(event)
+    
+
+  }
   const displayDetailsP = (event) =>{
     console.log("event :", event);
     //console.log("event2 :", event.target.dataset.logo);
 
     const hoveredLogo = event.target.currentSrc // pas fiable, trouvé un autre moyen
-    setCurrentLogo(event.target.currentSrc)
+    setCurrentLogo(hoveredLogo)
+    console.log("hoveredLogo", hoveredLogo);
 
     // affiche texte
     // affiche fond coloré
@@ -98,9 +107,9 @@ console.log("currentLOGO", currentLogo);
           
                       {data[currentKey].map((elmt, index)=>{
                         return(
-                          <div key={index} className='hoveredActions relative group is-test2 px-[1.5rem] py-[0.25rem]' data-logo={elmt.logoOnline} onMouseEnter={displayDetailsLogo}>
+                          <div key={index} className='hoveredActions relative group is-test2 px-[1.5rem] py-[0.25rem]' data-logo={elmt.logoOnline} onMouseEnter={handleLogoHover}>
                             
-                            <img className="w-[2rem] grayscale opacity-50 group-hover:w-[3rem] group-hover:grayscale-0 group-hover:opacity-100"src={elmt.logoOnline}/>
+                            <img className="w-[2rem] grayscale opacity-80 group-hover:w-[3rem] group-hover:grayscale-0 group-hover:opacity-100"src={elmt.logoOnline}/>
                             
                             <div className="hidden pt-[5.5vh] absolute group-hover:flex w-64 ">
                                 <p> <span className="span-text--bold">{elmt.name} </span>utilise OpenClimat pour échanger avec ses fournisseurs sur le sujet climat et suivre leurs avancements ljklj </p>
