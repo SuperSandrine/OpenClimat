@@ -52,38 +52,20 @@
     }
   }
 
-  @keyframes anim2 {
-    0%{
-      margin-top: 0px
-    }
-    100%{
-      margin-top: -71rem;
-    }
-  }
-
-  /* .text-fadeOut{
-    animation: fadeOut 12s, ease-in-out 1;
-  } */
-
-
   /* revoir les reglèes de animation pour ajuster les délai */
   #introFirst3{
-    animation: fadeOut 1s, ease-in-out 1;
-    animation: anim2 12s, ease-in-out 1;
+    animation: anim2 10s 2s ease-in-out 1, fadeOut 2s 3s ease-in-out 1;
+    animation-fill-mode: forwards; 
+
   }
 
   #introSecond3{
-    animation : fadeIn 3s, ease-in-out,1;
-     animation: anim 3s, ease-in-out 1; 
-     animation: fadeOut 6s, ease-in-out,1;
-    animation-delay: 4s;
+    animation : fadeIn 6s 3s ease-in-out 1, fadeOut 2s 7s ease-in-out 1
   }
 
   #introThird3{
-    animation : fadeIn 3s, ease-in-out,1;
-    animation: anim 3s, ease-in-out 1;
-    animation-delay: 8s;
-  }
+    animation : fadeIn 6s 7s ease-in-out 1;
+  } 
 
   .container-text-fadeOut{
     overflow: hidden;
@@ -98,19 +80,37 @@
       opacity: 0;
     }
   }
+
   @keyframes fadeIn {
     0%{
       opacity:0;
+    }
+    50%{
+      opacity:1;
     }
     100%{
       opacity:1;
     }
   }
 
+  @keyframes anim2 {
+    0%{
+      margin-top: 0px;
+    }
+    30%{
+      margin-top: -52rem;
+    }
+    50%{
+      margin-top: -52rem;
+    }
+    80%{
+      margin-top: -102rem;
+    }
+    100%{
+      margin-top: -102rem;
+    }
+  }
 
-
-  
- 
 }
 
 /* @keyframes anim {
