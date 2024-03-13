@@ -23,20 +23,8 @@
     bottom-[-1px]
     w-[calc(100%-4.25rem)] z-40 transition-all scale-0 duration-300 origin-left
   }
-  .animated-text{
-    /* position: absolute; */
-    /* top:50%; */
-    /* left: 50%; */
-    transform: translateY(-2%);
-    /* padding: 0 50px; */
-    /* height: 120px; */
-  }
 
-  .line{
-    /* line-height: 60px; */
-  }
-
-  .line:first-chil{
+  .line:first-child{
     animation: anim 12s ease-in 1;
   }
 
@@ -52,11 +40,13 @@
     }
   }
 
-  /* revoir les reglèes de animation pour ajuster les délai */
+  .container-fadeOut{
+    overflow: hidden;
+  }
+
   #introFirst3{
     animation: anim2 10s 2s ease-in-out 1, fadeOut 2s 3s ease-in-out 1;
     animation-fill-mode: forwards; 
-
   }
 
   #introSecond3{
@@ -66,11 +56,6 @@
   #introThird3{
     animation : fadeIn 6s 7s ease-in-out 1;
   } 
-
-  .container-text-fadeOut{
-    overflow: hidden;
-  }
-
 
   @keyframes fadeOut {
     0%{
@@ -110,23 +95,64 @@
       margin-top: -102rem;
     }
   }
+  #introImgFirst3{
+    animation: anim3 10s 2s ease-in-out 1, fadeOut 2s 3s ease-in-out 1; 
+    animation-fill-mode: forwards;
+  }
 
+  @keyframes anim3 {
+    0%{
+      margin-top: 0px;
+    }
+    30%{
+      margin-top: -210px;
+      opacity: 0;
+    }
+    100%{ 
+      margin-top: -210px;
+      opacity: 0;
+    }
+  }
+  #introImgSecond3{
+    animation: anim4 10s 2s ease-in-out 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes anim4 {
+    0%{
+      margin-top: 0px;
+      scale: 26.5%;
+      top: 85px;
+      left:80px;
+    }
+    30%{
+      margin-top: -210px;
+      opacity: 1;
+      scale: 26.5%;
+      top: 85px;
+      left:80px;
+    }
+    50%{
+      margin-top: -210px;
+      opacity: 1;
+      scale: 26.5%;
+      top: 85px;
+      left:80px;
+    }
+    80%{
+      margin-top: 0px;
+      opacity: 1;
+      scale: 70%;
+      top: 23px;
+      left:80px;
+
+    }
+    100%{
+      margin-top: 0px;
+      opacity: 1;
+      scale: 70%;
+      top: 23px;
+      left:80px;
+    }
+  }
 }
-
-/* @keyframes anim {
-  0%{
-    margin-top: -0px;
-  }
-  25%{
-    margin-top: -120px;
-  }
-  50%{
-    margin-top: -240px;
-  }
-  75%{
-    margin-top: -120px;
-  }
-  100%{
-    margin-top: -60px;
-  }
-} */
