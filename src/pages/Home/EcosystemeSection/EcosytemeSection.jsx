@@ -11,6 +11,9 @@ todo : logo on background
 todo : paragraph
 todo : transition entre background
 todo : transition au survol
+todo: enlever vh, car si fenetre étroite tout s'empile
+todo: gérer les différents états: selected, hovered du menu et de la barre de logo
+todo: bloquer la premiere sélection au chargement
 DONE: bouton
 */
 

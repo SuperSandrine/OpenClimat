@@ -3,7 +3,7 @@ import Arrow from '../SmallElements/Arrow'
 
 const ButtonCTA = ({children}) => {
   return (
-    <button className="text-bg-dark-blue bg-white flex items-center gap-2 pr-4 pl-5 py-2">
+    <button className="text-bg-dark-blue text-[1rem] rounded-[4px] bg-white flex items-center gap-2 pr-[1.5rem] pl-[2.5rem] py-[0.9rem] ">
       {children}
       <Arrow fill="#080e3e"/>
     </button>

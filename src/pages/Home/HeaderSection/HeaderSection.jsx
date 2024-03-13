@@ -7,6 +7,9 @@ todo : animer le texte
 todo : animer le dessin
 todo : change width in pourcentage according screen width
 todo : rajouter une écoute de texts (et agir quand ils existent)
+todo: répartir proportionnellement
+todo: enlever vh, car si fenêtre courte, tous les éléments s'empilent
+todo: animation text
 */
 
 const HeaderSection = () => {

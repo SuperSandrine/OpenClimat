@@ -27,11 +27,31 @@ export default {
         glissade:{
           '0%':{transform: 'translateY(0px)', opacity:1 },
           '100%':{transform: 'translateY(-50vh)',opacity:0}
+        },
+        animKeys:{
+          '0%':{
+            'margin-top': '-0px',
+          },
+          '25%':{
+            'margin-top': '-120px',
+          },
+          '50%':{
+            'margin-top': '-240px',
+          },
+          '75%':{
+            'margin-top': '-120px',
+          },
+          '100%':{
+            'margin-top': '-60px',
+          },
         }
+
       },
       animation:{
         glissade: 'glissade 2s ease-in-out 1s 1'
-      }
+      },
+        anim: 'animKeys 12s ease-in-out 3'
+
     },
   },
   plugins: [],

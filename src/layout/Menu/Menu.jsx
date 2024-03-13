@@ -7,8 +7,11 @@ import LinkMenu from '../../components/LinkMenu/LinkMenu';
 import DropDown from '../../components/Dropdown/DropDown';
 
 /*
+todo : dropdown : fond conditionnel bleu foncé et blur
+todo: masque pour éviter transparence de l'animation
+todo: ramplacé arrow avec Arrow
+
 done : dropdown : transistion ul shown/hidden
-todo : dropdown : fond conditionnel
 done : élargir la height des boutons
 */
 
