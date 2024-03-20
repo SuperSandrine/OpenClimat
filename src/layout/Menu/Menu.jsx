@@ -7,6 +7,7 @@ import LinkMenu from '../../components/LinkMenu/LinkMenu';
 import DropDown from '../../components/Dropdown/DropDown';
 
 /*
+todo: mettre la balise "nav" dans le menu
 todo : dropdown : fond conditionnel bleu foncé et blur
 todo: masque pour éviter transparence de l'animation
 todo: ramplacé arrow avec Arrow
@@ -46,7 +47,7 @@ const Menu = () => {
 
 
   return (
-  <div className=" fixed top-0 mx-auto container  backdrop-blur-md px-[2rem] text-white text-[15px] z-40 transition-all ease-in-out duration-[1s] " id="menu">
+  <nav aria-labelledby='menu' className=" fixed top-0 mx-auto container  backdrop-blur-md px-[2rem] text-white text-[15px] z-40 transition-all ease-in-out duration-[1s] " id="menu">
     <div className='flex justify-between border-b border-white/40 container-xl'>
 
 {/* <div className='flex justify-between w-[calc(100vw-4rem)] 
@@ -75,7 +76,7 @@ const Menu = () => {
       <Link to="/" className="pl-[2.5rem]" ><img src={flagFR} /> </Link>
     </div>
     </div>
-  </div>
+  </nav>
   )
 };
 

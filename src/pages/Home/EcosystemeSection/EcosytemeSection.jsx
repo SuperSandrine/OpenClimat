@@ -36,7 +36,7 @@ const EcosystemeSection = ({data}) => {
   const [currentLogo, setCurrentLogo] = useState(data[Object.keys(data)[0]][0].logoOnline)
 
   //console.log("PROPS", Object.keys(data)[0]);
-  console.log("clients" , data["Grande distribution"][0]);
+  //console.log("clients" , data["Grande distribution"][0]);
 
   const handleButtonHover = (event) => {
     const hoveredKey = event.currentTarget.dataset.key;
@@ -78,9 +78,9 @@ const EcosystemeSection = ({data}) => {
     //bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_E.Leclerc_Sans_le_texte.svg')]
   }
 
-console.log("currentLOGO", currentLogo);
+    //console.log("currentLOGO", currentLogo);
   return (
-    <section className=" h-screen text-dark-blue  bg-white/80 relative" id="ecosystemeSection"  >
+    <section className=" h-screen text-dark-blue  bg-white/80 relative overflow-hidden" id="ecosystemeSection"  >
       <div style={{ backgroundImage: `url('${currentLogo}')` }} className={`background-giant-logo bg-cover -z-50 blur-3xl bg-center bg-no-repeat absolute w-full h-full `}></div>
       <h2 className="text-5xl text-center pt-[12rem] w-[38.1875rem] m-auto"> L'information au service d'un écosystème engagé</h2>
       <p className="text-center pt-[4vh]">Ils nous font confiance</p>

@@ -8,7 +8,7 @@ import ButtonCTA from '../../../components/Buttons/ButtonCTA'
 const HeaderSectionThird = () => {
   
   return (
-    <div className="flex justify-evenly pt-[7rem] bg-gradient-to-b from-bg-dark-blue via-bg-middle-blue to-bg-light-pink h-screen overflow-hidden">
+    <div className="flex justify-evenly pt-[7rem] bg-gradient-to-b from-bg-dark-blue via-bg-middle-blue to-bg-light-pink h-screen overflow-hidden" id="headerSection">
       
         <div className="flex flex-col w-[23.4375rem] pt-[8rem] container-fadeOut">
 
